@@ -1,23 +1,42 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+allprojects {
+    buildscript {
+        repositories {
+            mavenCentral()
+        }
+    }
 
-buildscript {
     repositories {
         jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
-allprojects {
-    repositories {
-        jcenter()
-    }
+ext {
+    andoroidPlugin = 'com.android.tools.build:gradle:1.5.0'
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.2"
+
+    //Android dependencies.
+    appCompat = 'com.android.support:appcompat-v7:23.2.1'
+    supportAnnotations = 'com.android.support:support-annotations:23.2.1'
+
+    //Dagger dependencies.
+    dagger = 'com.squareup.dagger:dagger:1.2.2'
+    daggerCompiler = 'com.squareup.dagger:dagger-compiler:1.2.2'
+
+    //Reactive dependencies.
+    rxJava = 'io.reactivex:rxjava:1.1.1'
+    rxAndroid = 'io.reactivex:rxandroid:1.1.0'
+
+    //Other dependencies.
+    butterKnife = 'com.jakewharton:butterknife:7.0.1'
+    timber = 'com.jakewharton.timber:timber:4.1.1'
+    lombok = "org.projectlombok:lombok:1.16.8"
+    lombokCompiler = "org.projectlombok:lombok:1.16.8"
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+defaultTasks 'clean', 'build'
