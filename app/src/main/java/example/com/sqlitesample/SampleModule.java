@@ -6,8 +6,13 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import example.com.sqlitesample.db.DbModule;
 
-@Module
+@Module(
+    includes = {
+            DbModule.class
+    }
+)
 public final class SampleModule {
     private final Application application;
 
@@ -15,7 +20,7 @@ public final class SampleModule {
         this.application = application;
     }
 
-//    @Provides @Singleton Application provideApplication() {
-//        return application;
-//    }
+    @Provides @Singleton Application provideApplication() {
+        return application;
+    }
 }

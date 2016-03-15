@@ -37,8 +37,11 @@ ext {
     //Other dependencies.
     butterKnife = 'com.jakewharton:butterknife:7.0.1'
     timber = 'com.jakewharton.timber:timber:4.1.1'
-    lombok = "org.projectlombok:lombok:1.16.8"
-    lombokCompiler = "org.projectlombok:lombok:1.16.8"
+    lombok = 'org.projectlombok:lombok:1.16.8'
+    lombokCompiler = 'org.projectlombok:lombok:1.16.8'
+    sqlbrite = 'com.squareup.sqlbrite:sqlbrite:0.6.2'
+    autoParcel = 'com.github.frankiesardo:auto-parcel:0.3.1'
+    autoParcelProcessor = 'com.github.frankiesardo:auto-parcel-processor:0.3.1'
 }
 
 task clean(type: Delete) {
