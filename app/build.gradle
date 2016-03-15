@@ -1,12 +1,14 @@
 buildscript {
     dependencies {
         classpath rootProject.ext.andoroidPlugin
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.7'
+        classpath rootProject.ext.aptPlugin
+        classpath rootProject.ext.retrolambdaPlugin
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -25,12 +27,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
 
     compile rootProject.ext.appCompat
     compile rootProject.ext.supportAnnotations
+    compile rootProject.ext.design
 
     compile rootProject.ext.dagger
     apt rootProject.ext.daggerCompiler
@@ -39,9 +47,11 @@ dependencies {
     compile rootProject.ext.rxJava
     compile rootProject.ext.rxAndroid
 
+    retrolambdaConfig rootProject.ext.retrolambda
+
     //Other dependencies.
     compile rootProject.ext.butterKnife
     compile rootProject.ext.timber
-    compile rootProject.ext.lombok
+//    compile rootProject.ext.lombok
 //    apt rootProject.ext.lombokCompiler
 }
