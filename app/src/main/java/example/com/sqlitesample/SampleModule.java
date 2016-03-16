@@ -7,10 +7,12 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import example.com.sqlitesample.db.DbModule;
+import example.com.sqlitesample.ui.UiModule;
 
 @Module(
     includes = {
-            DbModule.class
+            DbModule.class,
+            UiModule.class
     }
 )
 public final class SampleModule {

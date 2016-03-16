@@ -57,4 +57,5 @@ dependencies {
     apt rootProject.ext.autoParcelProcessor
 //    compile rootProject.ext.lombok
 //    apt rootProject.ext.lombokCompiler
+    compile rootProject.ext.supportV4
 }

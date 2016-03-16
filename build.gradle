@@ -23,6 +23,7 @@ ext {
     appCompat = 'com.android.support:appcompat-v7:23.2.1'
     supportAnnotations = 'com.android.support:support-annotations:23.2.1'
     design = 'com.android.support:design:23.2.1'
+    supportV4 = 'com.android.support:support-v4:23.2.1'
 
     //Dagger dependencies.
     dagger = 'com.squareup.dagger:dagger:1.2.2'
