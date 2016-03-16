@@ -9,17 +9,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.squareup.sqlbrite.BriteDatabase;
+
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import example.com.sqlitesample.R;
+import example.com.sqlitesample.SampleApp;
+import example.com.sqlitesample.db.Category;
+import rx.android.schedulers.AndroidSchedulers;
 
 public class CategoryFragment extends Fragment {
+
+    private static final String LIST_QUERY = ""
+            + "SELECT * FROM " + Category.TABLE
+            + " WHERE 1";
 
     @Bind(R.id.category_pager)
     ViewPager categoryPager;
 
     @Bind(R.id.category_tabs)
     TabLayout categoryTabs;
+
+    @Inject
+    BriteDatabase briteDatabase;
 
     public CategoryFragment() {
         // Required empty public constructor
@@ -33,6 +47,7 @@ public class CategoryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        SampleApp.objectGraph(getContext()).inject(this);
         return inflater.inflate(R.layout.fragment_category, container, false);
     }
 
@@ -44,6 +59,11 @@ public class CategoryFragment extends Fragment {
             CategoryPagerAdapter categoryPagerAdapter = new CategoryPagerAdapter(getActivity().getSupportFragmentManager());
             categoryPager.setAdapter(categoryPagerAdapter);
             categoryTabs.setupWithViewPager(categoryPager);
+
+            briteDatabase.createQuery(Category.TABLE, LIST_QUERY)
+                    .mapToList(Category.MAPPER)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(categoryPagerAdapter);
         }
     }
 

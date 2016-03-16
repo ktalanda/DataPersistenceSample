@@ -29,6 +29,14 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_CATEGORY);
         db.execSQL(CREATE_PRODUCT);
+
+        long drinksId = db.insert(Category.TABLE, null, new Category.Builder().name("Drinks").build());
+        db.insert(Product.TABLE, null, new Product.Builder().idCategory(drinksId).name("Beer").build());
+        db.insert(Product.TABLE, null, new Product.Builder().idCategory(drinksId).name("Coke").build());
+
+        long foodId = db.insert(Category.TABLE, null, new Category.Builder().name("Food").build());
+        db.insert(Product.TABLE, null, new Product.Builder().idCategory(foodId).name("Burger").build());
+        db.insert(Product.TABLE, null, new Product.Builder().idCategory(foodId).name("Soup").build());
     }
 
     @Override

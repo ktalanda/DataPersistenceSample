@@ -5,7 +5,8 @@ import dagger.Module;
 @Module(
         injects = {
                 MainActivity.class,
-                CategoryFragment.class
+                CategoryFragment.class,
+                CategoryPageFragment.class
         },
         complete = false,
         library = true
