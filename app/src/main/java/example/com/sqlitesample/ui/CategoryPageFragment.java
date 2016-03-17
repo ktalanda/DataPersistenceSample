@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.squareup.sqlbrite.BriteDatabase;
 
 import javax.inject.Inject;
 
@@ -17,14 +16,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import example.com.sqlitesample.R;
 import example.com.sqlitesample.SampleApp;
-import example.com.sqlitesample.db.Product;
-import rx.android.schedulers.AndroidSchedulers;
+import example.com.sqlitesample.presenter.ProductPresenter;
 
 public class CategoryPageFragment extends Fragment {
-
-    public static final String LIST_PRODUCT = ""
-            + "SELECT * FROM " + Product.TABLE
-            + " WHERE " + Product.ID_CATEGORY + " = ?";
 
     private static final String ARG_CATEGORY = "category";
 
@@ -37,7 +31,8 @@ public class CategoryPageFragment extends Fragment {
     CategoryAdapter categoryAdapter;
 
     @Inject
-    BriteDatabase briteDatabase;
+    ProductPresenter presenter;
+
 
     public static CategoryPageFragment newInstance(long category) {
         CategoryPageFragment fragment = new CategoryPageFragment();
@@ -74,10 +69,8 @@ public class CategoryPageFragment extends Fragment {
         productList.setLayoutManager(new LinearLayoutManager(getActivity()));
         productList.setAdapter(categoryAdapter);
 
-        briteDatabase.createQuery(Product.TABLE, LIST_PRODUCT, "" + category)
-                .mapToList(Product.MAPPER)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(categoryAdapter);
+        presenter.getProductList(category).subscribe(categoryAdapter);
+
     }
 
     @Override
@@ -92,7 +85,7 @@ public class CategoryPageFragment extends Fragment {
 
     @OnClick(R.id.category_product_add)
     public void onProductAddClick(View view) {
-        briteDatabase.insert(Product.TABLE, new Product.Builder().idCategory(category).name("TEST").build());
+        presenter.createProduct(category, "TST");
     }
 
 }

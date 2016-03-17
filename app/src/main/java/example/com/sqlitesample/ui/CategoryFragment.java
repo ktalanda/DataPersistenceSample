@@ -9,22 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.squareup.sqlbrite.BriteDatabase;
-
 import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import example.com.sqlitesample.R;
 import example.com.sqlitesample.SampleApp;
-import example.com.sqlitesample.db.Category;
-import rx.android.schedulers.AndroidSchedulers;
+import example.com.sqlitesample.presenter.CategoryPresenter;
 
 public class CategoryFragment extends Fragment {
-
-    private static final String LIST_QUERY = ""
-            + "SELECT * FROM " + Category.TABLE
-            + " WHERE 1";
 
     @Bind(R.id.category_pager)
     ViewPager categoryPager;
@@ -33,7 +26,7 @@ public class CategoryFragment extends Fragment {
     TabLayout categoryTabs;
 
     @Inject
-    BriteDatabase briteDatabase;
+    CategoryPresenter presenter;
 
     public CategoryFragment() {
         // Required empty public constructor
@@ -59,11 +52,7 @@ public class CategoryFragment extends Fragment {
             CategoryPagerAdapter categoryPagerAdapter = new CategoryPagerAdapter(getActivity().getSupportFragmentManager());
             categoryPager.setAdapter(categoryPagerAdapter);
             categoryTabs.setupWithViewPager(categoryPager);
-
-            briteDatabase.createQuery(Category.TABLE, LIST_QUERY)
-                    .mapToList(Category.MAPPER)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(categoryPagerAdapter);
+            presenter.getCategoryList().subscribe(categoryPagerAdapter);
         }
     }
 

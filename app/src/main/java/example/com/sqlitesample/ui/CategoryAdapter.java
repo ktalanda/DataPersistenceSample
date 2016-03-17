@@ -1,12 +1,9 @@
 package example.com.sqlitesample.ui;
 
-import android.app.Application;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.squareup.sqlbrite.BriteDatabase;
 
 import java.util.List;
 
@@ -14,6 +11,7 @@ import javax.inject.Inject;
 
 import example.com.sqlitesample.R;
 import example.com.sqlitesample.db.Product;
+import example.com.sqlitesample.presenter.ProductPresenter;
 import rx.functions.Action1;
 
 public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> implements Action1<List<Product>>{
@@ -21,7 +19,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> imp
     public List<Product> data;
 
     @Inject
-    BriteDatabase briteDatabase;
+    ProductPresenter presenter;
 
     @Inject
     CategoryAdapter(){
@@ -35,7 +33,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> imp
 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
-        holder.bind(data.get(position), briteDatabase);
+        holder.bind(data.get(position), presenter);
     }
 
     @Override

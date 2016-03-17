@@ -5,12 +5,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.joanzapata.iconify.widget.IconButton;
-import com.squareup.sqlbrite.BriteDatabase;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import example.com.sqlitesample.R;
 import example.com.sqlitesample.db.Product;
+import example.com.sqlitesample.presenter.ProductPresenter;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder {
 
@@ -28,8 +28,8 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
         ButterKnife.bind(this, itemView);
     }
 
-    public void bind(Product product, BriteDatabase briteDatabase) {
+    public void bind(Product product, ProductPresenter presenter) {
         name.setText(product.name());
-        productRemoveButton.setOnClickListener(view -> briteDatabase.delete(Product.TABLE, Product.ID + " = ?", "" + product.id()));
+        productRemoveButton.setOnClickListener(view -> presenter.removeProduct(product.id()));
     }
 }
