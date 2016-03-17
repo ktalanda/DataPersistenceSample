@@ -39,6 +39,7 @@ dependencies {
     compile rootProject.ext.appCompat
     compile rootProject.ext.supportAnnotations
     compile rootProject.ext.design
+    compile rootProject.ext.cardView
 
     compile rootProject.ext.dagger
     apt rootProject.ext.daggerCompiler
@@ -58,4 +59,5 @@ dependencies {
 //    compile rootProject.ext.lombok
 //    apt rootProject.ext.lombokCompiler
     compile rootProject.ext.supportV4
+    compile rootProject.ext.iconifyFontAwesome
 }

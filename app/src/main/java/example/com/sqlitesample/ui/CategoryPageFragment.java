@@ -8,13 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.squareup.sqlbrite.BriteDatabase;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import example.com.sqlitesample.R;
 import example.com.sqlitesample.SampleApp;
 import example.com.sqlitesample.db.Product;
@@ -34,6 +34,9 @@ public class CategoryPageFragment extends Fragment {
     RecyclerView productList;
 
     @Inject
+    CategoryAdapter categoryAdapter;
+
+    @Inject
     BriteDatabase briteDatabase;
 
     public static CategoryPageFragment newInstance(long category) {
@@ -43,6 +46,7 @@ public class CategoryPageFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     public CategoryPageFragment() {
         // Required empty public constructor
     }
@@ -67,7 +71,6 @@ public class CategoryPageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
-        CategoryAdapter categoryAdapter = new CategoryAdapter();
         productList.setLayoutManager(new LinearLayoutManager(getActivity()));
         productList.setAdapter(categoryAdapter);
 
@@ -80,12 +83,16 @@ public class CategoryPageFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    @OnClick(R.id.category_product_add)
+    public void onProductAddClick(View view) {
+        briteDatabase.insert(Product.TABLE, new Product.Builder().idCategory(category).name("TEST").build());
     }
 
 }

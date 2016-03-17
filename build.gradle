@@ -24,6 +24,7 @@ ext {
     supportAnnotations = 'com.android.support:support-annotations:23.2.1'
     design = 'com.android.support:design:23.2.1'
     supportV4 = 'com.android.support:support-v4:23.2.1'
+    cardView = 'com.android.support:cardview-v7:23.2.1'
 
     //Dagger dependencies.
     dagger = 'com.squareup.dagger:dagger:1.2.2'
@@ -43,6 +44,7 @@ ext {
     sqlbrite = 'com.squareup.sqlbrite:sqlbrite:0.6.2'
     autoParcel = 'com.github.frankiesardo:auto-parcel:0.3.1'
     autoParcelProcessor = 'com.github.frankiesardo:auto-parcel-processor:0.3.1'
+    iconifyFontAwesome = 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.1'
 }
 
 task clean(type: Delete) {
