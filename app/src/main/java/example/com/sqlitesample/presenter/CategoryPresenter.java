@@ -19,14 +19,16 @@ public class CategoryPresenter extends BasePresenter<CategoryPresenter.CategoryV
     BriteDatabase briteDatabase;
 
     @Inject
-    CategoryPresenter(){}
-
-    public interface CategoryViewing {
+    CategoryPresenter() {
     }
 
-    public Observable<List<Category>> getCategoryList(){
+    public Observable<List<Category>> getCategoryList() {
         return briteDatabase.createQuery(Category.TABLE, LIST_QUERY)
                 .mapToList(Category.MAPPER)
                 .observeOn(AndroidSchedulers.mainThread());
     }
+
+    public interface CategoryViewing {
+    }
+
 }

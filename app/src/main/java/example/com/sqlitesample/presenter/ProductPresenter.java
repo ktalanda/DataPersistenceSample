@@ -20,12 +20,10 @@ public class ProductPresenter extends BasePresenter<ProductPresenter.CategoryVie
     BriteDatabase briteDatabase;
 
     @Inject
-    ProductPresenter(){}
-
-    public interface CategoryViewing {
+    ProductPresenter() {
     }
 
-    public Observable<List<Product>> getProductList(long category){
+    public Observable<List<Product>> getProductList(long category) {
 
         return briteDatabase.createQuery(Product.TABLE, LIST_PRODUCT, "" + category)
                 .mapToList(Product.MAPPER)
@@ -36,7 +34,10 @@ public class ProductPresenter extends BasePresenter<ProductPresenter.CategoryVie
         briteDatabase.insert(Product.TABLE, new Product.Builder().idCategory(category).name(name).build());
     }
 
-    public void removeProduct(long productId){
+    public void removeProduct(long productId) {
         briteDatabase.delete(Product.TABLE, Product.ID + " = ?", "" + productId);
+    }
+
+    public interface CategoryViewing {
     }
 }

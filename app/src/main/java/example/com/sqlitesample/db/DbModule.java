@@ -21,12 +21,12 @@ public class DbModule {
     }
 
     @Provides @Singleton
-    SqlBrite provideSqlBrite(){
+    SqlBrite provideSqlBrite() {
         return SqlBrite.create(message -> Timber.tag("Database").v(message));
     }
 
     @Provides @Singleton
-    BriteDatabase provideDatabase(SqlBrite sqlBrite, SQLiteOpenHelper helper){
+    BriteDatabase provideDatabase(SqlBrite sqlBrite, SQLiteOpenHelper helper) {
         BriteDatabase db = sqlBrite.wrapDatabaseHelper(helper, Schedulers.io());
         db.setLoggingEnabled(true);
         return db;

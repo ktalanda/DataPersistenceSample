@@ -9,13 +9,13 @@ import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import dagger.ObjectGraph;
 import timber.log.Timber;
 
-public class SampleApp extends Application{
+public class SampleApp extends Application {
     private ObjectGraph objectGraph;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        if(BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
         objectGraph = ObjectGraph.create(new SampleModule(this));
@@ -23,6 +23,6 @@ public class SampleApp extends Application{
     }
 
     public static ObjectGraph objectGraph(Context context) {
-        return ((SampleApp)context.getApplicationContext()).objectGraph;
+        return ((SampleApp) context.getApplicationContext()).objectGraph;
     }
 }

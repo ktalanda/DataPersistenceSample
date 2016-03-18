@@ -2,9 +2,13 @@ package example.com.sqlitesample.db;
 
 import android.database.Cursor;
 
-public class Db {
+public final class SampleDatabase {
     public static final int BOOLEAN_FALSE = 0;
     public static final int BOOLEAN_TRUE = 1;
+
+    private SampleDatabase() {
+        throw new AssertionError("No instances");
+    }
 
     public static String getString(Cursor cursor, String columnName) {
         return cursor.getString(cursor.getColumnIndexOrThrow(columnName));
@@ -22,7 +26,4 @@ public class Db {
         return cursor.getLong(cursor.getColumnIndexOrThrow(columnName));
     }
 
-    private Db(){
-        throw new AssertionError("No instances");
-    }
 }

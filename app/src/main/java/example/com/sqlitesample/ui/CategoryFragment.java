@@ -33,8 +33,7 @@ public class CategoryFragment extends Fragment {
     }
 
     public static CategoryFragment newInstance() {
-        CategoryFragment fragment = new CategoryFragment();
-        return fragment;
+        return new CategoryFragment();
     }
 
     @Override
@@ -48,8 +47,9 @@ public class CategoryFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-        if(categoryPager != null) {
-            CategoryPagerAdapter categoryPagerAdapter = new CategoryPagerAdapter(getActivity().getSupportFragmentManager());
+        if (categoryPager != null) {
+            CategoryPagerAdapter categoryPagerAdapter
+                    = new CategoryPagerAdapter(getActivity().getSupportFragmentManager());
             categoryPager.setAdapter(categoryPagerAdapter);
             categoryTabs.setupWithViewPager(categoryPager);
             presenter.getCategoryList().subscribe(categoryPagerAdapter);

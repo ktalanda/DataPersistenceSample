@@ -22,8 +22,6 @@ public class CategoryPageFragment extends Fragment {
 
     private static final String ARG_CATEGORY = "category";
 
-    private long category;
-
     @Bind(R.id.category_product_list)
     RecyclerView productList;
 
@@ -33,6 +31,10 @@ public class CategoryPageFragment extends Fragment {
     @Inject
     ProductPresenter presenter;
 
+    private long category;
+
+    public CategoryPageFragment() {
+    }
 
     public static CategoryPageFragment newInstance(long category) {
         CategoryPageFragment fragment = new CategoryPageFragment();
@@ -40,10 +42,6 @@ public class CategoryPageFragment extends Fragment {
         args.putLong(ARG_CATEGORY, category);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public CategoryPageFragment() {
-        // Required empty public constructor
     }
 
     @Override

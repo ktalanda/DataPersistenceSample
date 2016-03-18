@@ -6,7 +6,7 @@ public class BasePresenter<V> {
 
     private V view;
 
-    public BasePresenter(){
+    public BasePresenter() {
     }
 
     @CallSuper

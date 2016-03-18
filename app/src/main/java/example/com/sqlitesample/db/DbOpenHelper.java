@@ -8,10 +8,6 @@ public class DbOpenHelper extends SQLiteOpenHelper {
 
     public static final int VERSION = 1;
 
-    public DbOpenHelper(Context context) {
-        super(context, "sample.db", null, VERSION);
-    }
-
     public static final String CREATE_CATEGORY = ""
             + "CREATE TABLE " + Category.TABLE + "("
             + Category.ID + " INTEGER NOT NULL PRIMARY KEY,"
@@ -24,6 +20,10 @@ public class DbOpenHelper extends SQLiteOpenHelper {
             + Product.ID_CATEGORY + " INTEGER NOT NULL REFERENCES " + Category.TABLE + "(" + Category.ID + "),"
             + Product.NAME + " TEXT NOT NULL"
             + ")";
+
+    public DbOpenHelper(Context context) {
+        super(context, "sample.db", null, VERSION);
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {

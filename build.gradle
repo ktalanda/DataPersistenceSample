@@ -45,6 +45,9 @@ ext {
     autoParcel = 'com.github.frankiesardo:auto-parcel:0.3.1'
     autoParcelProcessor = 'com.github.frankiesardo:auto-parcel-processor:0.3.1'
     iconifyFontAwesome = 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.1'
+
+    //Test dependencies.
+    junit = 'junit:junit:4.12'
 }
 
 task clean(type: Delete) {

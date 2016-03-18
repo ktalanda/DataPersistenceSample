@@ -14,16 +14,16 @@ public abstract class Product {
     public static final String ID_CATEGORY = "id_category";
     public static final String NAME = "name";
 
+    public static final Func1<Cursor, Product> MAPPER = cursor -> {
+        long id = SampleDatabase.getLong(cursor, ID);
+        long idCategory = SampleDatabase.getLong(cursor, ID_CATEGORY);
+        String name = SampleDatabase.getString(cursor, NAME);
+        return new AutoParcel_Product(id, idCategory, name);
+    };
+
     public abstract long id();
     public abstract long idCategory();
     public abstract String name();
-
-    public static final Func1<Cursor, Product> MAPPER = cursor -> {
-        long id = Db.getLong(cursor, ID);
-        long idCategory = Db.getLong(cursor, ID_CATEGORY);
-        String name = Db.getString(cursor, NAME);
-        return new AutoParcel_Product(id, idCategory, name);
-    };
 
     public static final class Builder {
         private final ContentValues values = new ContentValues();

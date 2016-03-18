@@ -14,7 +14,7 @@ import example.com.sqlitesample.db.Product;
 import example.com.sqlitesample.presenter.ProductPresenter;
 import rx.functions.Action1;
 
-public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> implements Action1<List<Product>>{
+public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> implements Action1<List<Product>> {
 
     public List<Product> data;
 
@@ -22,7 +22,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> imp
     ProductPresenter presenter;
 
     @Inject
-    CategoryAdapter(){
+    CategoryAdapter() {
     }
 
     @Override

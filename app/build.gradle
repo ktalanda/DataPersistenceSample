@@ -9,6 +9,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
+apply from: '../config/quality.gradle'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -60,4 +61,7 @@ dependencies {
 //    apt rootProject.ext.lombokCompiler
     compile rootProject.ext.supportV4
     compile rootProject.ext.iconifyFontAwesome
+
+    //Test dependencies.
+    testCompile rootProject.ext.junit
 }
