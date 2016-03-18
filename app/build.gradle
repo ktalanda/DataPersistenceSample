@@ -16,7 +16,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "example.com.sqlitesample"
+        applicationId "com.example.sqlitesample"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1

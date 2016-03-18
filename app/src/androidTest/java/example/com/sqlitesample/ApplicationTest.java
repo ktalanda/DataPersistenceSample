@@ -1,4 +1,4 @@
-package example.com.sqlitesample;
+package com.example.sqlitesample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
