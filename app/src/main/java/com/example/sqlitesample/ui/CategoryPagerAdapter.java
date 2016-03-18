@@ -1,4 +1,4 @@
-package example.com.sqlitesample.ui;
+package com.example.sqlitesample.ui;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import example.com.sqlitesample.db.Category;
+import com.example.sqlitesample.db.Category;
 import rx.functions.Action1;
 
 public class CategoryPagerAdapter extends FragmentPagerAdapter implements Action1<List<Category>> {

@@ -1,11 +1,11 @@
-package example.com.sqlitesample.presenter;
+package com.example.sqlitesample.presenter;
 
 import com.squareup.sqlbrite.BriteDatabase;
 import java.util.List;
 
 import javax.inject.Inject;
 
-import example.com.sqlitesample.db.Category;
+import com.example.sqlitesample.db.Category;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 

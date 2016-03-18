@@ -1,4 +1,4 @@
-package example.com.sqlitesample.ui;
+package com.example.sqlitesample.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,9 +14,9 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import example.com.sqlitesample.R;
-import example.com.sqlitesample.SampleApp;
-import example.com.sqlitesample.presenter.ProductPresenter;
+import com.example.sqlitesample.R;
+import com.example.sqlitesample.SampleApp;
+import com.example.sqlitesample.presenter.ProductPresenter;
 
 public class CategoryPageFragment extends Fragment {
 

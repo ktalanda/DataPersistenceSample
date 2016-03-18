@@ -1,4 +1,4 @@
-package example.com.sqlitesample.ui;
+package com.example.sqlitesample.ui;
 
 import dagger.Module;
 

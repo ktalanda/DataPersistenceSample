@@ -1,4 +1,4 @@
-package example.com.sqlitesample;
+package com.example.sqlitesample;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import example.com.sqlitesample.db.DbModule;
-import example.com.sqlitesample.ui.UiModule;
+import com.example.sqlitesample.db.DbModule;
+import com.example.sqlitesample.ui.UiModule;
 
 @Module(
     includes = {

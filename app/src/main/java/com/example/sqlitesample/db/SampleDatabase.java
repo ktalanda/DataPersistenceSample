@@ -1,4 +1,4 @@
-package example.com.sqlitesample.db;
+package com.example.sqlitesample.db;
 
 import android.database.Cursor;
 

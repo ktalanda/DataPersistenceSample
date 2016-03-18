@@ -1,4 +1,4 @@
-package example.com.sqlitesample.presenter;
+package com.example.sqlitesample.presenter;
 
 import android.support.annotation.CallSuper;
 

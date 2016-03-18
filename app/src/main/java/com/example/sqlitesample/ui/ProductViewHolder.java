@@ -1,4 +1,4 @@
-package example.com.sqlitesample.ui;
+package com.example.sqlitesample.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,9 +8,9 @@ import com.joanzapata.iconify.widget.IconButton;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import example.com.sqlitesample.R;
-import example.com.sqlitesample.db.Product;
-import example.com.sqlitesample.presenter.ProductPresenter;
+import com.example.sqlitesample.R;
+import com.example.sqlitesample.db.Product;
+import com.example.sqlitesample.presenter.ProductPresenter;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder {
 

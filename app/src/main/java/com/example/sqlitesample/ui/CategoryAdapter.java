@@ -1,4 +1,4 @@
-package example.com.sqlitesample.ui;
+package com.example.sqlitesample.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,9 +9,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import example.com.sqlitesample.R;
-import example.com.sqlitesample.db.Product;
-import example.com.sqlitesample.presenter.ProductPresenter;
+import com.example.sqlitesample.R;
+import com.example.sqlitesample.db.Product;
+import com.example.sqlitesample.presenter.ProductPresenter;
 import rx.functions.Action1;
 
 public class CategoryAdapter extends RecyclerView.Adapter<ProductViewHolder> implements Action1<List<Product>> {
