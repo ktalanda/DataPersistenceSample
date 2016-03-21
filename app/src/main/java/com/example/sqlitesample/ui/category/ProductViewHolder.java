@@ -1,4 +1,4 @@
-package com.example.sqlitesample.ui;
+package com.example.sqlitesample.ui.category;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

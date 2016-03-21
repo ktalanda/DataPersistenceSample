@@ -1,5 +1,8 @@
 package com.example.sqlitesample.ui;
 
+import com.example.sqlitesample.ui.category.CategoryFragment;
+import com.example.sqlitesample.ui.category.CategoryPageFragment;
+
 import dagger.Module;
 
 @Module(

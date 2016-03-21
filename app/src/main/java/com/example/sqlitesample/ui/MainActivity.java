@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.example.sqlitesample.R;
+import com.example.sqlitesample.ui.category.CategoryFragment;
 
 public class MainActivity extends AppCompatActivity {
 

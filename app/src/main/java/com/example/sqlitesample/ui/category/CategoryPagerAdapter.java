@@ -1,4 +1,4 @@
-package com.example.sqlitesample.ui;
+package com.example.sqlitesample.ui.category;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

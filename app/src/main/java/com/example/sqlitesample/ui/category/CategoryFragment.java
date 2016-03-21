@@ -1,4 +1,4 @@
-package com.example.sqlitesample.ui;
+package com.example.sqlitesample.ui.category;
 
 import android.content.Context;
 import android.os.Bundle;
