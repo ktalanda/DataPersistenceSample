@@ -23,7 +23,7 @@ public class CommonStorage {
 
     public String getSample() {
         if (isAvailable(SAMPLE)) {
-            throw new IllegalStateException(SAMPLE +" is not stored");
+            throw new IllegalStateException(SAMPLE + " is not stored");
         }
         return preferences.getString(SAMPLE, "");
     }
