@@ -11,10 +11,6 @@ import rx.android.schedulers.AndroidSchedulers;
 
 public class CategoryPresenter extends BasePresenter<CategoryPresenter.CategoryViewing> {
 
-    private static final String LIST_QUERY = ""
-            + "SELECT * FROM " + Category.TABLE
-            + " WHERE 1";
-
     @Inject
     BriteDatabase briteDatabase;
 
@@ -23,8 +19,8 @@ public class CategoryPresenter extends BasePresenter<CategoryPresenter.CategoryV
     }
 
     public Observable<List<Category>> getCategoryList() {
-        return briteDatabase.createQuery(Category.TABLE, LIST_QUERY)
-                .mapToList(Category.MAPPER)
+        return briteDatabase.createQuery(Category.TABLE_NAME, Category.SELECT_ALL)
+                .mapToList(Category.MAPPER::map)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 

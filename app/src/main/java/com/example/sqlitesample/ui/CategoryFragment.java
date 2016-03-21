@@ -29,7 +29,6 @@ public class CategoryFragment extends Fragment {
     CategoryPresenter presenter;
 
     public CategoryFragment() {
-        // Required empty public constructor
     }
 
     public static CategoryFragment newInstance() {

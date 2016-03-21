@@ -3,12 +3,14 @@ buildscript {
         classpath rootProject.ext.andoroidPlugin
         classpath rootProject.ext.aptPlugin
         classpath rootProject.ext.retrolambdaPlugin
+        classpath rootProject.ext.sqldelight
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.squareup.sqldelight'
 apply from: '../config/quality.gradle'
 
 android {

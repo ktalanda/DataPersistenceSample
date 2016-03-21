@@ -1,5 +1,7 @@
 package com.example.sqlitesample.presenter;
 
+import android.content.ContentValues;
+
 import com.squareup.sqlbrite.BriteDatabase;
 
 import java.util.List;
@@ -12,10 +14,6 @@ import rx.android.schedulers.AndroidSchedulers;
 
 public class ProductPresenter extends BasePresenter<ProductPresenter.CategoryViewing> {
 
-    public static final String LIST_PRODUCT = ""
-            + "SELECT * FROM " + Product.TABLE
-            + " WHERE " + Product.ID_CATEGORY + " = ?";
-
     @Inject
     BriteDatabase briteDatabase;
 
@@ -25,17 +23,22 @@ public class ProductPresenter extends BasePresenter<ProductPresenter.CategoryVie
 
     public Observable<List<Product>> getProductList(long category) {
 
-        return briteDatabase.createQuery(Product.TABLE, LIST_PRODUCT, "" + category)
-                .mapToList(Product.MAPPER)
+        return briteDatabase.createQuery(Product.TABLE_NAME, Product.FOR_CATEGORY, String.valueOf(category))
+                .mapToList(Product.MAPPER::map)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
     public void createProduct(long category, String name) {
-        briteDatabase.insert(Product.TABLE, new Product.Builder().idCategory(category).name(name).build());
+        ContentValues contentValues
+                = new Product.Marshal()
+                        .id_category(category)
+                        .name(name)
+                        .asContentValues();
+        briteDatabase.insert(Product.TABLE_NAME, contentValues);
     }
 
     public void removeProduct(long productId) {
-        briteDatabase.delete(Product.TABLE, Product.ID + " = ?", "" + productId);
+        briteDatabase.delete(Product.TABLE_NAME, Product.ID + " = ?", String.valueOf(productId));
     }
 
     public interface CategoryViewing {
