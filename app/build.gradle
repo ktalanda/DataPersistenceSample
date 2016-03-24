@@ -66,4 +66,6 @@ dependencies {
 
     //Test dependencies.
     testCompile rootProject.ext.junit
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:preference-v7:23.2.0'
 }
