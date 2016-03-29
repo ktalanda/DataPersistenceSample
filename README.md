@@ -1,7 +1,7 @@
 # Data Persistence Sample
 
 Topics covered:
-    * Shared Preferences
-    * File Storing
-    * SQLite
-    * Content Providers
+ * Shared Preferences
+ * File Storing
+ * SQLite
+ * Content Providers
