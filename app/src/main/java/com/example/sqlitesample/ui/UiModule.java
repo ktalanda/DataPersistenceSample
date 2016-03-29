@@ -2,6 +2,8 @@ package com.example.sqlitesample.ui;
 
 import com.example.sqlitesample.ui.category.CategoryFragment;
 import com.example.sqlitesample.ui.category.CategoryPageFragment;
+import com.example.sqlitesample.ui.settings.fragment.GeneralPreferenceFragment;
+import com.example.sqlitesample.ui.settings.fragment.NotificationPreferenceFragment;
 
 import dagger.Module;
 
@@ -9,7 +11,9 @@ import dagger.Module;
         injects = {
                 MainActivity.class,
                 CategoryFragment.class,
-                CategoryPageFragment.class
+                CategoryPageFragment.class,
+                GeneralPreferenceFragment.class,
+                NotificationPreferenceFragment.class
         },
         complete = false,
         library = true

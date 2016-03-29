@@ -6,8 +6,6 @@ import javax.inject.Inject;
 
 public class CommonStorage {
 
-    private static final String SAMPLE = "SAMPLE";
-
     @Inject
     SharedPreferences preferences;
 
@@ -15,17 +13,14 @@ public class CommonStorage {
     CommonStorage() {
     }
 
-    public void storeSample(String sample) {
+    public void storeString(String key, String value) {
         preferences.edit()
-                .putString(SAMPLE, sample)
+                .putString(key, value)
                 .apply();
     }
 
-    public String getSample() {
-        if (isAvailable(SAMPLE)) {
-            throw new IllegalStateException(SAMPLE + " is not stored");
-        }
-        return preferences.getString(SAMPLE, "");
+    public String getString(String key) {
+        return preferences.getString(key, "");
     }
 
     public boolean isAvailable(String pref) {
