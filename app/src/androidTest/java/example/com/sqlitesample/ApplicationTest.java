@@ -1,4 +1,4 @@
-package com.example.sqlitesample;
+package com.example.datapersistancesample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
