@@ -1,9 +1,6 @@
 buildscript {
     dependencies {
-        classpath rootProject.ext.andoroidPlugin
-        classpath rootProject.ext.aptPlugin
-        classpath rootProject.ext.retrolambdaPlugin
-        classpath rootProject.ext.sqldelight
+        classpath rootProject.ext.appPlugin
     }
 }
 
@@ -38,34 +35,8 @@ android {
 }
 
 dependencies {
-
-    compile rootProject.ext.appCompat
-    compile rootProject.ext.supportAnnotations
-    compile rootProject.ext.design
-    compile rootProject.ext.cardView
-
-    compile rootProject.ext.dagger
-    apt rootProject.ext.daggerCompiler
-
-    //Reactive dependencies.
-    compile rootProject.ext.rxJava
-    compile rootProject.ext.rxAndroid
-
+    compile rootProject.ext.appCompile
+    apt rootProject.ext.appApt
+    testCompile rootProject.ext.appTest
     retrolambdaConfig rootProject.ext.retrolambda
-
-    //Other dependencies.
-    compile rootProject.ext.butterKnife
-    compile rootProject.ext.timber
-    compile rootProject.ext.sqlbrite
-    compile rootProject.ext.autoParcel
-    apt rootProject.ext.autoParcelProcessor
-//    compile rootProject.ext.lombok
-//    apt rootProject.ext.lombokCompiler
-    compile rootProject.ext.supportV4
-    compile rootProject.ext.iconifyFontAwesome
-
-    //Test dependencies.
-    testCompile rootProject.ext.junit
-    compile 'com.android.support:support-v4:23.2.1'
-    compile 'com.android.support:preference-v7:23.2.0'
 }
