@@ -1,8 +1,6 @@
 package com.example.sqlitesample.presenter;
 
-import android.content.ContentValues;
-
-import com.squareup.sqlbrite.BriteDatabase;
+import com.example.sqlitesample.storage.CommonStorage;
 
 import java.util.List;
 
@@ -12,10 +10,10 @@ import com.example.sqlitesample.db.Product;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 
-public class ProductPresenter extends BasePresenter<ProductPresenter.CategoryViewing> {
+public class ProductPresenter extends BasePresenter<ProductPresenter.Viewing> {
 
     @Inject
-    BriteDatabase briteDatabase;
+    CommonStorage storage;
 
     @Inject
     ProductPresenter() {
@@ -23,24 +21,18 @@ public class ProductPresenter extends BasePresenter<ProductPresenter.CategoryVie
 
     public Observable<List<Product>> getProductList(long category) {
 
-        return briteDatabase.createQuery(Product.TABLE_NAME, Product.FOR_CATEGORY, String.valueOf(category))
-                .mapToList(Product.MAPPER::map)
+        return storage.getProductList(category)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
     public void createProduct(long category, String name) {
-        ContentValues contentValues
-                = new Product.Marshal()
-                        .id_category(category)
-                        .name(name)
-                        .asContentValues();
-        briteDatabase.insert(Product.TABLE_NAME, contentValues);
+        storage.createProduct(category, name);
     }
 
     public void removeProduct(long productId) {
-        briteDatabase.delete(Product.TABLE_NAME, Product.ID + " = ?", String.valueOf(productId));
+        storage.removeProduct(productId);
     }
 
-    public interface CategoryViewing {
+    public interface Viewing {
     }
 }

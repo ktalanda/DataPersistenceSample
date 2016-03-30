@@ -1,6 +1,6 @@
 package com.example.sqlitesample.presenter;
 
-import com.squareup.sqlbrite.BriteDatabase;
+import com.example.sqlitesample.storage.CommonStorage;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -9,22 +9,21 @@ import com.example.sqlitesample.db.Category;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 
-public class CategoryPresenter extends BasePresenter<CategoryPresenter.CategoryViewing> {
+public class CategoryPresenter extends BasePresenter<CategoryPresenter.Viewing> {
 
     @Inject
-    BriteDatabase briteDatabase;
+    CommonStorage storage;
 
     @Inject
     CategoryPresenter() {
     }
 
     public Observable<List<Category>> getCategoryList() {
-        return briteDatabase.createQuery(Category.TABLE_NAME, Category.SELECT_ALL)
-                .mapToList(Category.MAPPER::map)
+        return storage.getCategoryList()
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    public interface CategoryViewing {
+    public interface Viewing {
     }
 
 }
