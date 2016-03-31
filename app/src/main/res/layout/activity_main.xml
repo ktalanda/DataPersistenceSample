@@ -18,6 +18,12 @@
         android:text="@string/main_shared_preferences" />
 
     <Button
+        android:id="@+id/main_file_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_file_button" />
+
+    <Button
         android:id="@+id/main_database_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
