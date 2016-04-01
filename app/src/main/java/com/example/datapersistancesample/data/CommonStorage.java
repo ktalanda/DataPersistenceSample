@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 import com.example.datapersistancesample.data.database.Category;
 import com.example.datapersistancesample.data.database.Product;
+import com.example.datapersistancesample.data.file.FileAccess;
 import com.squareup.sqlbrite.BriteDatabase;
 
 import java.util.List;
@@ -20,6 +21,9 @@ public class CommonStorage {
 
     @Inject
     BriteDatabase briteDatabase;
+
+    @Inject
+    FileAccess fileAccess;
 
     @Inject
     CommonStorage() {
@@ -60,5 +64,9 @@ public class CommonStorage {
 
     public void removeProduct(long productId) {
         briteDatabase.delete(Product.TABLE_NAME, Product.ID + " = ?", String.valueOf(productId));
+    }
+
+    public Observable<List<String>> getNoteList() {
+        return fileAccess.getFileContentList();
     }
 }
