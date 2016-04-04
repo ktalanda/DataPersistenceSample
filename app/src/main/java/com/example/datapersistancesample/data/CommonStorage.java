@@ -9,6 +9,7 @@ import com.example.datapersistancesample.data.file.FileAccess;
 import com.squareup.sqlbrite.BriteDatabase;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -66,7 +67,15 @@ public class CommonStorage {
         briteDatabase.delete(Product.TABLE_NAME, Product.ID + " = ?", String.valueOf(productId));
     }
 
-    public Observable<List<String>> getNoteList() {
+    public Observable<List<Map<String, String>>> getNoteList() {
         return fileAccess.getFileContentList();
+    }
+
+    public Observable<Map<String, String>> addNote(String content) {
+        return fileAccess.addFileWithStringContent(content);
+    }
+
+    public Observable<Boolean> removeNote(String name) {
+        return fileAccess.removeFile(name);
     }
 }

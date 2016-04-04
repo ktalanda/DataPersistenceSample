@@ -6,16 +6,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.datapersistancesample.R;
+import com.example.datapersistancesample.presenter.NotePresenter;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
 import rx.functions.Action1;
 
-public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> implements Action1<List<String>> {
+public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder>
+        implements Action1<List<Map<String, String>>> {
 
-    public List<String> data;
+    public List<Map<String, String>> data;
+
+    @Inject
+    NotePresenter presenter;
 
     @Inject
     NoteAdapter() {
@@ -24,12 +30,13 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> implements
     @Override
     public NoteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_note, parent, false);
+
         return new NoteViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(NoteViewHolder holder, int position) {
-        holder.bind(data.get(position));
+        holder.bind(data.get(position), presenter);
     }
 
     @Override
@@ -38,7 +45,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> implements
     }
 
     @Override
-    public void call(List<String> strings) {
+    public void call(List<Map<String, String>> strings) {
         data = strings;
         notifyDataSetChanged();
     }

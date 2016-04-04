@@ -57,6 +57,8 @@ ext {
             sqlbrite = "com.squareup.sqlbrite:sqlbrite:$sqlBriteVersion",
             autoParcel = "com.github.frankiesardo:auto-parcel:$autoParcelVersion",
             iconifyFontAwesome = "com.joanzapata.iconify:android-iconify-fontawesome:$iconifyVersion",
+            guava = "com.google.guava:guava:19.0",
+
 //            lombok = "org.projectlombok:lombok:$lombokVersion",
 //            lombokCompiler = "org.projectlombok:lombok:$lombokVersion",
     ]

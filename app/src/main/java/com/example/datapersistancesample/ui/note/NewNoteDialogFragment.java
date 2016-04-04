@@ -1,6 +1,7 @@
 package com.example.datapersistancesample.ui.note;
 
 import android.app.DialogFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -10,6 +11,9 @@ import android.widget.EditText;
 
 import com.example.datapersistancesample.R;
 import com.example.datapersistancesample.SampleApp;
+import com.example.datapersistancesample.presenter.NotePresenter;
+
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -23,12 +27,28 @@ public class NewNoteDialogFragment extends DialogFragment {
     EditText note;
 
     @Inject
+    NotePresenter presenter;
+
+    private OnNewNoteDialogFragmentInteractionListener listener;
+
+    @Inject
     public NewNoteDialogFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnNewNoteDialogFragmentInteractionListener) {
+            listener = (OnNewNoteDialogFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnNewNoteDialogFragmentInteractionListener");
+        }
     }
 
     @Nullable
@@ -47,15 +67,13 @@ public class NewNoteDialogFragment extends DialogFragment {
 
     @OnClick(R.id.note_add_button)
     public void onAddNoteButtonClick(View view) {
-//        String noteString = note.getText().toString();
-//        try {
-//            FileOutputStream outputStream = getActivity().openFileOutput("note", Context.MODE_PRIVATE);
-//            outputStream.write(noteString.getBytes());
-//            outputStream.close();
-//        } catch (Exception e) {
-//
-//        } finally {
-            dismiss();
-//        }
+        presenter.addNote(note.getText().toString())
+            .subscribe(listener::addNote);
+        dismiss();
     }
+
+    public interface OnNewNoteDialogFragmentInteractionListener {
+        void addNote(Map<String, String> note);
+    }
+
 }

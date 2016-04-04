@@ -31,5 +31,11 @@
         </Not>
     </Match>
 
+    <Match>
+        <Class name="com.example.datapersistancesample.data.file.FileAccess" />
+        <Method name="addFileWithStringContent" />
+        <Bug pattern="DM_DEFAULT_ENCODING" />
+    </Match>
+
 
 </FindBugsFilter>

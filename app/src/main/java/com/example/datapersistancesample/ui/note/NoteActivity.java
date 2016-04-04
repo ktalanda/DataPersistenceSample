@@ -12,6 +12,8 @@ import com.example.datapersistancesample.R;
 import com.example.datapersistancesample.SampleApp;
 import com.example.datapersistancesample.presenter.NotePresenter;
 
+import java.util.Map;
+
 import javax.inject.Inject;
 import javax.inject.Provider;
 
@@ -19,7 +21,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class NoteActivity extends AppCompatActivity {
+public class NoteActivity extends AppCompatActivity
+        implements NewNoteDialogFragment.OnNewNoteDialogFragmentInteractionListener {
 
     @Inject
     Provider<NewNoteDialogFragment> newNoteDialogFragmentProvider;
@@ -53,4 +56,9 @@ public class NoteActivity extends AppCompatActivity {
         dialogFragment.show(getFragmentManager(), "dialog");
     }
 
+    @Override
+    public void addNote(Map<String, String> content) {
+        noteAdapter.data.add(content);
+        noteAdapter.notifyDataSetChanged();
+    }
 }
