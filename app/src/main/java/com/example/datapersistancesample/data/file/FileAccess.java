@@ -7,7 +7,10 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,9 +45,11 @@ public class FileAccess {
     }
 
     public Observable<Map<String, String>> addFileWithStringContent(String content) {
-        String fileName = "note_" + context.getFilesDir().listFiles().length;
+        String fileName = "note_" + new BigInteger(130, new SecureRandom()).toString(32);
         try {
-            Files.write(content, new File(fileName), Charsets.UTF_8);
+            FileOutputStream outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+            outputStream.write(content.getBytes());
+            outputStream.close();
         } catch (IOException exception) {
             Timber.e(exception.getMessage());
         }

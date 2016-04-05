@@ -12,6 +12,7 @@ import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import rx.functions.Action1;
 
 public class NoteViewHolder extends RecyclerView.ViewHolder {
 
@@ -26,9 +27,10 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         ButterKnife.bind(this, itemView);
     }
 
-    public void bind(Map<String, String> note, NotePresenter presenter) {
+    public void bind(Map<String, String> note, NotePresenter presenter, Action1<Boolean> deleteAction) {
         Map.Entry<String, String> entry = note.entrySet().iterator().next();
         noteText.setText(entry.getValue());
-        noteRemove.setOnClickListener(view -> presenter.removeNote(entry.getKey()));
+        noteRemove.setOnClickListener(view ->
+                presenter.removeNote(entry.getKey()).subscribe(deleteAction));
     }
 }

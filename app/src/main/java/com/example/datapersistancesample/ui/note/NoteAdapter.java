@@ -36,12 +36,18 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder>
 
     @Override
     public void onBindViewHolder(NoteViewHolder holder, int position) {
-        holder.bind(data.get(position), presenter);
+        holder.bind(data.get(position), presenter,
+                result -> deleteItem(position));
     }
 
     @Override
     public int getItemCount() {
         return data != null ? data.size() : 0;
+    }
+
+    public void deleteItem(int position) {
+        data.remove(position);
+        notifyDataSetChanged();
     }
 
     @Override
