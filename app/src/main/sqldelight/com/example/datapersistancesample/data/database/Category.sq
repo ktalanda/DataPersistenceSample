@@ -1,9 +1,0 @@
-CREATE TABLE category (
-        id LONG NOT NULL PRIMARY KEY AUTOINCREMENT,
-        name STRING NOT NULL
-);
-
-select_all:
-SELECT *
-FROM category
-WHERE 1;
