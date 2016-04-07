@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9/guava-19.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/guava-19.0_bfa71743e4f8bd31bfab3f8ad027d618dc1394da.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.1_24c93b89a6be71affbbc21aa6f35cbfb34384719.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.jakewharton.timber/timber/4.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="630b29f983afc36ec2c99bc8b4cae38b328119b4">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.jakewharton.timber-timber-4.1.1_7952dfda800048cec1687ede8c4344fd27699ba9.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_5489561ab9b16e656234de4d7d25208ffdd95a55.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.joanzapata.iconify/android-iconify/2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="84fa37db1e60ca85901041f80355eb1a21be9ecd">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.joanzapata.iconify-android-iconify-2.2.1_90d2a4f618ea6b8a63d41d0d267d1f2794aa399e.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_393a9c532534d3d35638f090bcbd7aa8a55f86e5.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/javax.inject-1_4c31738fda25b08655b63bba67ec68584a50a6d5.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/com.squareup.dagger/dagger/1.2.2/e8f912ee19ad84958510883ea191135276b091f8/dagger-1.2.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e8f912ee19ad84958510883ea191135276b091f8">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/dagger-1.2.2_909dc954dd779595bb264a25e450a245bd44653c.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/com.github.frankiesardo/auto-parcel/0.3.1/501393158454717fef27cba8d177f32a158b8955/auto-parcel-0.3.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="501393158454717fef27cba8d177f32a158b8955">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/auto-parcel-0.3.1_8fdf6caa27037b75bffdd488280e89381782b599.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_552e460c045d476e3df9e78f47fecda73fd5f0be.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.1.0_7af74f49c960ed237e0f8fd1e9407b327bdb155d.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_538946c0470545d1ddfd82de5fbb5714794f8e31.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/preference-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ffdfc8b94e6d46a997ada2edc9a212782d4d321d">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-preference-v7-23.2.1_d93b3547309c25fa26cbf54a76d79fe93479f3f3.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_5f13499ac531ae6f709b0f8dbe58be3e7034618b.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.1_6d01ee94b4d787244a7a0ed2e291ae5b94d71fd8.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_be02857976845f815548ebdbfbc08b7d834cf8cf.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_ed135739f92b81977dd1d72c8e4909e00d6bafe8.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_e04fa648248fba2b0e7831ffdcb28b4bb3a606c4.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.joanzapata.iconify/android-iconify-fontawesome/2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="af20faf2a6fff6cac01bb9ee4130ee942a29ec22">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.joanzapata.iconify-android-iconify-fontawesome-2.2.1_e7b71d4af030d27e40644be0f796f0a99d950ecc.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.1/b494968f6050d494de55dc3ce005e59c7eb40012/rxjava-1.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b494968f6050d494de55dc3ce005e59c7eb40012">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/rxjava-1.1.1_05200dd4fcbbe188d010f506f562e2caf267a950.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.squareup.sqldelight/runtime/0.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d24d0453a4b93c6e02872ee8cd872c8b0732ef81">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.squareup.sqldelight-runtime-0.2.0_4d076f3d0c33f3bffd9e5d045e23fb45e9c97d4b.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.squareup.sqlbrite/sqlbrite/0.6.2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9ead99eecb62f250c3de745ce8ead6c77850f6a6">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.squareup.sqlbrite-sqlbrite-0.6.2_ae610d22f75cfc55383b05891da16c18c12d56b3.jar" />
+    </item>
+
+</items>
