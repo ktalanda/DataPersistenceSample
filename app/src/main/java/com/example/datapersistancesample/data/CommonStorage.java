@@ -1,10 +1,6 @@
 package com.example.datapersistancesample.data;
 
-import android.content.ContentValues;
-import android.content.SharedPreferences;
-
 import com.example.datapersistancesample.data.file.FileAccess;
-import com.squareup.sqlbrite.BriteDatabase;
 
 import java.util.List;
 import java.util.Map;
