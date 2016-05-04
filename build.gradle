@@ -32,7 +32,7 @@ ext {
     retrolambdaVersion = "2.1.0"
 
     appPlugin = [
-            andoroidPlugin = "com.android.tools.build:gradle:1.5.0",
+            andoroidPlugin = "com.android.tools.build:gradle:2.1.0",
             aptPlugin = "com.neenbedankt.gradle.plugins:android-apt:1.7",
             retrolambdaPlugin = "me.tatarka:gradle-retrolambda:3.2.5",
             sqldelight = "com.squareup.sqldelight:gradle-plugin:0.2.0",

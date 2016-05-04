@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.MainActivity"
-            android:label="@string/title_activity_main">
+            android:name=".ui.category.CategoryActivity"
+            android:label="@string/title_activity_category"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,17 +20,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.category.CategoryActivity"
-            android:label="@string/title_activity_category"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ui.settings.SettingsActivity"
-            android:label="@string/title_activity_settings" />
-        <activity
-            android:name=".ui.note.NoteActivity"
-            android:label="@string/title_activity_note"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
