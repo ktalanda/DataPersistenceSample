@@ -27,5 +27,6 @@ public class CategoryActivity extends AppCompatActivity {
                     .replace(R.id.main_fragment, CategoryFragment.newInstance())
                     .commit();
         }
+
     }
 }
