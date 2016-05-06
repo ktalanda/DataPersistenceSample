@@ -121,18 +121,18 @@
         <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_5f13499ac531ae6f709b0f8dbe58be3e7034618b.jar" />
     </item>
     <item
-        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.joanzapata.iconify/android-iconify/2.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="84fa37db1e60ca85901041f80355eb1a21be9ecd">
-        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.joanzapata.iconify-android-iconify-2.2.1_90d2a4f618ea6b8a63d41d0d267d1f2794aa399e.jar" />
-    </item>
-    <item
         jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.squareup.sqldelight/runtime/0.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="d24d0453a4b93c6e02872ee8cd872c8b0732ef81">
         <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.squareup.sqldelight-runtime-0.2.0_4d076f3d0c33f3bffd9e5d045e23fb45e9c97d4b.jar" />
+    </item>
+    <item
+        jar="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/exploded-aar/com.joanzapata.iconify/android-iconify/2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="84fa37db1e60ca85901041f80355eb1a21be9ecd">
+        <dex dex="/home/k.talanda/workspace/DataPersistenceSample/app/build/intermediates/pre-dexed/debug/com.joanzapata.iconify-android-iconify-2.2.1_90d2a4f618ea6b8a63d41d0d267d1f2794aa399e.jar" />
     </item>
     <item
         jar="/home/k.talanda/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
