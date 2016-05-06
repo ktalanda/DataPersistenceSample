@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.joanzapata.iconify.widget.IconButton;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.example.datapersistancesample.R;
 import com.example.datapersistancesample.data.database.Product;
@@ -14,13 +14,13 @@ import com.example.datapersistancesample.presenter.ProductPresenter;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder {
 
-    @Bind(R.id.product_name)
+    @BindView(R.id.product_name)
     TextView name;
 
-    @Bind(R.id.product_edit)
+    @BindView(R.id.product_edit)
     IconButton productEditButton;
 
-    @Bind(R.id.product_remove)
+    @BindView(R.id.product_remove)
     IconButton productRemoveButton;
 
     public ProductViewHolder(View itemView) {

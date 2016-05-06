@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.example.datapersistancesample.R;
 import com.example.datapersistancesample.SampleApp;
@@ -19,10 +19,10 @@ import com.example.datapersistancesample.presenter.CategoryPresenter;
 
 public class CategoryFragment extends Fragment {
 
-    @Bind(R.id.category_pager)
+    @BindView(R.id.category_pager)
     ViewPager categoryPager;
 
-    @Bind(R.id.category_tabs)
+    @BindView(R.id.category_tabs)
     TabLayout categoryTabs;
 
     @Inject

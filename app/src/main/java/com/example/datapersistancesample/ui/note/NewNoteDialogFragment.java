@@ -17,13 +17,13 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class NewNoteDialogFragment extends DialogFragment {
 
-    @Bind(R.id.note_edit_text)
+    @BindView(R.id.note_edit_text)
     EditText note;
 
     @Inject

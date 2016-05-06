@@ -17,7 +17,7 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -33,7 +33,7 @@ public class NoteActivity extends AppCompatActivity
     @Inject
     NotePresenter presenter;
 
-    @Bind(R.id.note_list)
+    @BindView(R.id.note_list)
     RecyclerView noteList;
 
     @Override

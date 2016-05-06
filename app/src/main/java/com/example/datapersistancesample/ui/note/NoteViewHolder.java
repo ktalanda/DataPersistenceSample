@@ -10,16 +10,16 @@ import com.example.datapersistancesample.presenter.NotePresenter;
 
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.functions.Action1;
 
 public class NoteViewHolder extends RecyclerView.ViewHolder {
 
-    @Bind(R.id.note_text)
+    @BindView(R.id.note_text)
     TextView noteText;
 
-    @Bind(R.id.note_remove)
+    @BindView(R.id.note_remove)
     Button noteRemove;
 
     public NoteViewHolder(View itemView) {

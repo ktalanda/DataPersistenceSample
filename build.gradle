@@ -20,7 +20,7 @@ ext {
     rxJavaVersion = "1.1.1"
     rxAndroidVersion = "1.1.0"
 
-    butterknifeVersion = "7.0.1"
+    butterknifeVersion = "8.0.1"
     timberVersion = "4.1.1"
     sqlBriteVersion = "0.6.2"
     autoParcelVersion = "0.3.1"
@@ -66,6 +66,7 @@ ext {
     appApt = [
             daggerCompiler = "com.squareup.dagger:dagger-compiler:$daggerVersion",
             autoParcelProcessor = "com.github.frankiesardo:auto-parcel-processor:$autoParcelVersion",
+            butterknifeCompiler = "com.jakewharton:butterknife-compiler:$butterknifeVersion",
     ]
 
     appTest = [

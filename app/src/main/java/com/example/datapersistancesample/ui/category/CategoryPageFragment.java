@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.datapersistancesample.R;
@@ -22,7 +22,7 @@ public class CategoryPageFragment extends Fragment {
 
     private static final String ARG_CATEGORY = "category";
 
-    @Bind(R.id.category_product_list)
+    @BindView(R.id.category_product_list)
     RecyclerView productList;
 
     @Inject
