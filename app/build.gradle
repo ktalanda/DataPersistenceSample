@@ -39,5 +39,4 @@ dependencies {
     apt rootProject.ext.appApt
     testCompile rootProject.ext.appTest
     retrolambdaConfig rootProject.ext.retrolambda
-    compile 'com.android.support:support-v4:23.2.1'
 }
