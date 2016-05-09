@@ -9,36 +9,29 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.example.datapersistancesample.data.CommonStorage;
 import com.example.datapersistancesample.data.database.DbOpenHelper;
 import com.example.datapersistancesample.data.database.Product;
 import com.squareup.sqlbrite.BriteDatabase;
 import com.squareup.sqlbrite.SqlBrite;
-
-import javax.inject.Inject;
 
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
 
 public class AppContentProvider extends ContentProvider {
 
-    private static final String AUTHORITY_NAME = "com.example.datapersistancesample.provider";
-    private static final String BASE_URI = "content://" + AUTHORITY_NAME;
-    private static final Uri CONTENT_URI = Uri.parse(BASE_URI);
+    public static final String AUTHORITY_NAME = "com.example.datapersistancesample.provider";
+    public static final String BASE_URL = "content://" + AUTHORITY_NAME;
+    public static final String PRODUCT_URL = "product";
 
+    private static final Uri CONTENT_URI = Uri.parse(BASE_URL);
     private static final int PRODUCT = 1;
-    private static final int PRODUCT_ID = 2;
 
     private static final UriMatcher URI_MATCHER;
 
     static {
         URI_MATCHER = new UriMatcher(UriMatcher.NO_MATCH);
-        URI_MATCHER.addURI(AUTHORITY_NAME, "product", PRODUCT);
-        URI_MATCHER.addURI(AUTHORITY_NAME, "product/#", PRODUCT_ID);
+        URI_MATCHER.addURI(AUTHORITY_NAME, PRODUCT_URL, PRODUCT);
     }
-
-    @Inject
-    CommonStorage commonStorage;
 
     private BriteDatabase briteDatabase;
 
@@ -57,7 +50,7 @@ public class AppContentProvider extends ContentProvider {
             case PRODUCT:
                 return "vnd.android.cursor.dir/vnd.com.example.datapersistancesample.product";
             default:
-                return "";
+                throw new IllegalArgumentException("Unsuported URI:" + uri);
         }
     }
 
@@ -72,7 +65,7 @@ public class AppContentProvider extends ContentProvider {
             case PRODUCT:
                 return briteDatabase.query("SELECT * FROM product WHERE 1;");
             default:
-                return null;
+                throw new IllegalArgumentException("Unsuported URI:" + uri);
         }
     }
 
@@ -83,23 +76,13 @@ public class AppContentProvider extends ContentProvider {
             long id = briteDatabase.insert(Product.TABLE_NAME, values);
             return ContentUris.withAppendedId(CONTENT_URI, id);
         } catch (Exception exception) {
-            Timber.e("Save product Error.");
-            return null;
+            throw new IllegalArgumentException("Unsuported URI:" + uri);
         }
     }
 
     @Override
     public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
-        switch (URI_MATCHER.match(uri)) {
-            case PRODUCT_ID:
-                return briteDatabase
-                        .delete(
-                                Product.TABLE_NAME,
-                                Product.ID + " = ?",
-                                String.valueOf(uri.getPathSegments().get(1)));
-            default:
-                return 0;
-        }
+        return 0;
     }
 
     @Override

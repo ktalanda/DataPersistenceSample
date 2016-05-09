@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.datapersistancesample.R;
 import com.example.datapersistancesample.ui.category.CategoryActivity;
+import com.example.datapersistancesample.ui.content_provider.ContentProviderActivity;
 import com.example.datapersistancesample.ui.note.NoteActivity;
 import com.example.datapersistancesample.ui.settings.SettingsActivity;
 
@@ -35,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.main_file_button)
     public void onFileButtonClick(View view) {
         startActivity(new Intent(this, NoteActivity.class));
+    }
+
+    @OnClick(R.id.main_content_provider_button)
+    public void onContentProviderButtonClick(View view) {
+        startActivity(new Intent(this, ContentProviderActivity.class));
     }
 }

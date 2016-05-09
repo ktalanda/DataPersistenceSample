@@ -4,6 +4,7 @@
     <string name="title_activity_settings">Shared Preferences</string>
     <string name="title_activity_note">File Storage</string>
     <string name="title_activity_category">Database</string>
+    <string name="title_activity_content_provider">Content Provider</string>
 
     <!-- Strings related to Settings -->
 
@@ -66,6 +67,7 @@
     <string name="main_shared_preferences">Shared Preferences</string>
     <string name="main_database_button">Database</string>
     <string name="main_file_button">File Storage</string>
+    <string name="main_content_provider_button">Content Provider</string>
 
     <string name="note_switch_internal">INTERNAL STORAGE</string>
     <string name="note_switch_external">EXTERNAL STORAGE</string>

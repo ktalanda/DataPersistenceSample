@@ -16,4 +16,8 @@ public class BasePresenter<V> {
         }
         this.view = view;
     }
+
+    public void unbind() {
+        this.view = null;
+    }
 }

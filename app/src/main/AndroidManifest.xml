@@ -29,11 +29,16 @@
         <activity
             android:name=".ui.note.NoteActivity"
             android:label="@string/title_activity_note"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <provider
-            android:authorities="com.example.datapersistancesample.provider"
-            android:name=".data.contentprovider.AppContentProvider" />
+            android:name=".data.contentprovider.AppContentProvider"
+            android:authorities="com.example.datapersistancesample.provider" />
+
+        <activity
+            android:name=".ui.content_provider.ContentProviderActivity"
+            android:label="@string/title_activity_content_provider"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
