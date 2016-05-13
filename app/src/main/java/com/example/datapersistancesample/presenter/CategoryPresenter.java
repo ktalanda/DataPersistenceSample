@@ -1,7 +1,6 @@
 package com.example.datapersistancesample.presenter;
 
 import com.example.datapersistancesample.data.CommonStorage;
-import java.util.List;
 
 import javax.inject.Inject;
 
