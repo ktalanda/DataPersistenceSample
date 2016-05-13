@@ -6,8 +6,6 @@ import com.example.datapersistancesample.data.database.Category;
 import com.example.datapersistancesample.data.database.Product;
 import com.squareup.sqlbrite.BriteDatabase;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import rx.Observable;
@@ -22,14 +20,14 @@ public class CommonStorage {
     CommonStorage() {
     }
 
-    public Observable<List<Category>> getCategoryList() {
+    public Observable<Category> getCategoryList() {
         return briteDatabase.createQuery(Category.TABLE_NAME, Category.SELECT_ALL)
-                .mapToList(Category.MAPPER::map);
+                .mapToOne(Category.MAPPER::map);
     }
 
-    public Observable<List<Product>> getProductList(long category) {
+    public Observable<Product> getProductList(long category) {
         return briteDatabase.createQuery(Product.TABLE_NAME, Product.FOR_CATEGORY, String.valueOf(category))
-                .mapToList(Product.MAPPER::map);
+                .mapToOne(Product.MAPPER::map);
     }
 
     public void createProduct(long category, String name) {

@@ -18,7 +18,7 @@ public class CategoryPresenter extends BasePresenter<CategoryPresenter.Viewing> 
     CategoryPresenter() {
     }
 
-    public Observable<List<Category>> getCategoryList() {
+    public Observable<Category> getCategoryList() {
         return storage.getCategoryList()
                 .observeOn(AndroidSchedulers.mainThread());
     }

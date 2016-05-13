@@ -19,7 +19,7 @@ public class ProductPresenter extends BasePresenter<ProductPresenter.Viewing> {
     ProductPresenter() {
     }
 
-    public Observable<List<Product>> getProductList(long category) {
+    public Observable<Product> getProductList(long category) {
 
         return storage.getProductList(category)
                 .observeOn(AndroidSchedulers.mainThread());

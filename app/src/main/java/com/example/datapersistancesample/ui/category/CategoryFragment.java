@@ -51,7 +51,9 @@ public class CategoryFragment extends Fragment {
                     = new CategoryPagerAdapter(getActivity().getSupportFragmentManager());
             categoryPager.setAdapter(categoryPagerAdapter);
             categoryTabs.setupWithViewPager(categoryPager);
-            presenter.getCategoryList().subscribe(categoryPagerAdapter);
+            presenter.getCategoryList()
+                    .toList()
+                    .subscribe(categoryPagerAdapter);
         }
     }
 

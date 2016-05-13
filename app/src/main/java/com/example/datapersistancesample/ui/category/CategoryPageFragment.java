@@ -67,7 +67,9 @@ public class CategoryPageFragment extends Fragment {
         productList.setLayoutManager(new LinearLayoutManager(getActivity()));
         productList.setAdapter(categoryAdapter);
 
-        presenter.getProductList(category).subscribe(categoryAdapter);
+        presenter.getProductList(category)
+                .toList()
+                .subscribe(categoryAdapter);
 
     }
 
